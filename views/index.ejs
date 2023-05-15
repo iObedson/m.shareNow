@@ -1,0 +1,163 @@
+<%- include ("includes/header") %>
+
+<div id="homeApp" style="margin-bottom: 80px">
+  <div class="container" id="features">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Public And Private File Sharing</h1>
+        <p>Node JS and Mongo DB</p>
+
+        <a v-bind:href="mainURL + '/MyUploads'">Get Started</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Collabrative -->
+
+        <div class="card">
+          <div class="card-header">
+            <img v-bind:src="mainURL + '/public/img/collaboration.svg'" />
+          </div>
+
+          <div class="card-body">
+            <h4>Realtime Collaboration</h4>
+            <p>
+              When someone updates a file you shared, it will be displayed on
+              your side in realtime. You do not have to refresh the page to see
+              the changes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <img v-bind:src="mainURL + '/public/img/mongodb-icon.svg'" />
+          </div>
+
+          <div class="card-body">
+            <h4>Privacy is Paramount</h4>
+            <p>
+              We are using Mongo DB as a database for flexible data schemes,
+              change-friendly design, easy horizontal scale-out and high
+              performance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <img
+              v-bind:src="mainURL + '/public/img/expressjs.svg'"
+              style="width: 100px"
+            />
+          </div>
+
+          <div class="card-body">
+            <h4>We are copyright compliant</h4>
+            <p>
+              Express framework has been used for flexibility, non-blocking I/O
+              operations, realtime communication and APIs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <img v-bind:src="mainURL + '/public/img/socket-io.svg'" />
+          </div>
+
+          <div class="card-body">
+            <h4>Socket IO</h4>
+            <p>
+              Socket IO for bi-directional and event-based communication between
+              client and server. Web sockets are faster than HTTP.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <img v-bind:src="mainURL + '/public/img/share.svg'" />
+          </div>
+
+          <div class="card-body">
+            <h4>Share Files</h4>
+            <p>
+              Share files privately or publicly. Publicly shared files can be
+              downloaded by anyone. But a privately shared file will only be
+              downloaded by the person shared with.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="counterContainer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Share Files</h4>
+          <p>Up to 1GB Free</p>
+        </div>
+
+        <div class="col-md-4">
+          <h4>1 GB</h4>
+          <p>Free storage</p>
+        </div>
+
+        <div class="col-md-4">
+          <h4>Need More?</h4>
+          <p>Premium Features Coming Soon</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <br />
+          <p style="font-size: 20px">
+            Get the premium version with all the features mentioned above.
+            Customer support is also included in the premium version. <br />
+            All payments are handled securely.
+          </p>
+
+          <a
+            href="#"
+            target="_blank"
+            class="btn btn-success"
+            style="margin-top: 30px"
+          >
+            Contact us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const homeApp = Vue.createApp({
+    data() {
+      return {
+        mainURL: baseUrl,
+      };
+    },
+  });
+  homeApp.mount('#homeApp');
+</script>
+
+<%- include ("includes/footer") %>
