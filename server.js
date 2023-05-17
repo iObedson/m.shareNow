@@ -371,6 +371,7 @@ function recursiveGetAllFolders(files, _id) {
 // start the http server
 app.listen(3000, () => {
   console.log("Server started at " + mainURL);
+  const db = new MongoClient(process.env.MONGO_URI);
 
   // connect with mongo DB server
   mongoClient.connect(
