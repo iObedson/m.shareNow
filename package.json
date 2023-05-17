@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Public and private file sharing app",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npm i"
   },
   "author": "",
   "license": "ISC",
