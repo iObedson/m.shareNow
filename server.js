@@ -1,10 +1,8 @@
 require('dotenv').config()
 
 // using express JS
-
 const express = require("express");
 const app = express();
-const MongoStore = require('connect-mongo');
 
 // express formidable is used to parse the form data values
 const formidable = require("express-formidable");
@@ -93,7 +91,6 @@ const session = require("express-session");
 app.use(
     session({
       secret: "secret key",
-      store: new MongoStore({mongoUrl: process.env.MONGO_URI}),
       resave: false,
       saveUninitialized: false,
     }),
