@@ -2,7 +2,7 @@ require('dotenv').config()
 
 // using express JS
 
-const MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongo');
 const express = require("express");
 const app = express();
 
