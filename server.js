@@ -93,7 +93,7 @@ const session = require("express-session");
 app.use(
     session({
       secret: "secret key",
-      store: new MongoStore(process.env.MONGO_URI),
+      store: new MongoStore({mongoUrl: process.env.MONGO_URI}),
       resave: false,
       saveUninitialized: false,
     }),
